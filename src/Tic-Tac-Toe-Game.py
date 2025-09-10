@@ -1,7 +1,7 @@
 import os
 from sys import exit
-board = ['0','1','2','3','4','5','6','7','8','9','10']
 from IPython.display import clear_output
+board = ['0','1','2','3','4','5','6','7','8','9','10']
 
 def display_board(board):
     clear_output()
