@@ -64,7 +64,7 @@ def player_choice():
 
 def win_check(board):
     global game_on
-    if all(item == 'X for item in board[7:10]) and player1 == 'X:
+    if all(item == 'X' for item in board[7:10]) and player1 == 'X':
             print('Player1 Wins!')
             os.system('clear')
             gameon_choice()
@@ -72,7 +72,7 @@ def win_check(board):
             print('Player2 Wins!')
             os.system('clear')
             gameon_choice()
-    elif all(item == 'X for item in board[4:7]) and player1 == 'X:
+    elif all(item == 'X' for item in board[4:7]) and player1 == 'X':
             print('Player1 Wins!')
             os.system('clear')
             gameon_choice()
@@ -80,7 +80,7 @@ def win_check(board):
             print('Player2 wins')
             os.system('clear')
             gameon_choice()
-    elif all(item == 'X for item in board[1:4]) and player1 == 'X:
+    elif all(item == 'X' for item in board[1:4]) and player1 == 'X':
             print('Player1 Wins!')
             os.system('clear')
             gameon_choice()
