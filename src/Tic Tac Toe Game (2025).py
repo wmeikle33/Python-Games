@@ -64,70 +64,24 @@ def player_choice():
 
 def win_check(board):
     global game_on
-    if all(item == 'X' for item in board[7:10]) and player1 == 'X':
-            print('Player1 Wins!')
-            os.system('clear')
-            gameon_choice()
-        else:
-            print('Player2 Wins!')
-            os.system('clear')
-            gameon_choice()
-    elif all(item == 'X' for item in board[4:7]) and player1 == 'X':
-            print('Player1 Wins!')
-            os.system('clear')
-            gameon_choice()
-        else:
-            print('Player2 wins')
-            os.system('clear')
-            gameon_choice()
-    elif all(item == 'X' for item in board[1:4]) and player1 == 'X':
-            print('Player1 Wins!')
-            os.system('clear')
-            gameon_choice()
-        else:
-            print('Player2 Wins!')
-            os.system('clear')
-            gameon_choice()
-    elif board[7] == board[4] == board[1] == player1 == 'X':
-            print('Player1 Wins!')
-            os.system('clear')
-            gameon_choice()
-        else:
-            print('Player2 Wins!')
-            os.system('clear')
-            gameon_choice()
-    elif board[8] == board[5] == board[2] == player1 == 'X':
-            print('Player1 Wins!')
-            gameon_choice()
-        else:
-            print('Player2 Wins')
-            os.system('clear')
-            gameon_choice()
-    elif board[9] == board[6] == board[3] == player1 == 'X':
-            print('Player1 Wins!')
-            os.system('clear')
-            gameon_choice()
-        else:
-            print('Player2 Wins!')
-            os.system('clear')
-            gameon_choice()
-    elif board[7] == board[5] == board[3] == player1 == 'X':
-            print('Player1 Wins!')
-            os.system('clear')
-            gameon_choice()
-        else:
-            print('Player2 Wins')
-            os.system('clear')
-            gameon_choice()
-    elif board[1] == board[5] == board[9] == player1 == 'X':
-            print('Player1 Wins!')
-            os.system('clear')
-            gameon_choice()
-        else:
-            print('Player2 Wins')
-            os.system('clear')
-            gameon_choice()
-    elif '1' not in board and '2' not in board and '3' not in board and '4' not in board and '5' not in board and '6' not in board and '7' not in board and '8' not in board and '9' not in board:
+    for i in range(1,10,3)
+        if all(item == 'X' for item in board[i:i+3]:
+                print('Player1 Wins!')
+                os.system('clear')
+                gameon_choice()
+        elif board[i] == board[i+3] == board[i+6] == player1 == 'X':
+                print('Player1 Wins!')
+                os.system('clear')
+                gameon_choice()
+        elif all(item == '0' for item in board[i:i+3]:
+                print('Player2 Wins!')
+                os.system('clear')
+                gameon_choice()
+        elif board[i] == board[i+3] == board[i+6] == player1 == '0':
+                print('Player2 Wins!')
+                os.system('clear')
+                gameon_choice()
+    if '1' not in board and '2' not in board and '3' not in board and '4' not in board and '5' not in board and '6' not in board and '7' not in board and '8' not in board and '9' not in board:
         print("It's a tie!, Want to play again?")
         os.system('clear')
         gameon_choice()
