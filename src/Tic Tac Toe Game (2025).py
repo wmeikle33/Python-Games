@@ -77,7 +77,7 @@ def win_check(board):
                 print('Player2 Wins!')
                 os.system('clear')
                 gameon_choice()
-        elif board[i] == board[i+3] == board[i+6] == player1 == '0':
+        elif board[i] == board[i+3] == board[i+6] == player2 == '0':
                 print('Player2 Wins!')
                 os.system('clear')
                 gameon_choice()
