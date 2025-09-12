@@ -64,23 +64,24 @@ def player_choice():
 
 def win_check(board):
     global game_on
-    for i in range(1,10,3)
-        if all(item == 'X' for item in board[i:i+3]:
+    for i in range(1,10,3):
+        if all(item == 'X' for item in board[i:i+3]):
                 print('Player1 Wins!')
                 os.system('clear')
                 gameon_choice()
-        elif board[i] == board[i+3] == board[i+6] == player1 == 'X':
-                print('Player1 Wins!')
-                os.system('clear')
-                gameon_choice()
-        elif all(item == '0' for item in board[i:i+3]:
+        elif all(item == '0' for item in board[i:i+3]):
                 print('Player2 Wins!')
                 os.system('clear')
                 gameon_choice()
-        elif board[i] == board[i+3] == board[i+6] == player2 == '0':
+    for i in range(1,4):
+        if board[i] == board[i+4] == board[i+8] == player2 == '0':
                 print('Player2 Wins!')
                 os.system('clear')
                 gameon_choice()
+        elif board[i] == board[i+4] == board[i+8] == player1 == 'X':
+            print('Player1 Wins!')
+            os.system('clear')
+            gameon_choice()
     if '1' not in board and '2' not in board and '3' not in board and '4' not in board and '5' not in board and '6' not in board and '7' not in board and '8' not in board and '9' not in board:
         print("It's a tie!, Want to play again?")
         os.system('clear')
